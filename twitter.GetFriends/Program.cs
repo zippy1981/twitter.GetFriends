@@ -39,8 +39,11 @@ namespace twitter.GetFriends
                     Settings.Default.UserId = (int)tokenResponse.UserId;
                     Settings.Default.Save();
                 }
+                _tokens.AccessToken = Settings.Default.UserAccessToken;
+                _tokens.AccessTokenSecret = Settings.Default.UserAccessSecret;
             }
 
+            /*
             {
                 var userInfo = GetUserInfo().ToBsonDocument();
                 var csvWriter = new CsvWriter(Console.Out);
@@ -48,12 +51,12 @@ namespace twitter.GetFriends
                 csvWriter.WriteDataRecord(userInfo.Values);
                 Console.WriteLine();
             }
-
+            */
             {
-                var users = GetMutualFriends(_tokens).ToBsonDocument();
+                var users = GetMutualFriends(_tokens);
                 var csvWriter = new CsvWriter(Console.Out);
-                csvWriter.WriteHeaderRecord(users.Names.ToArray());
-                csvWriter.WriteDataRecord(users.Values);
+                csvWriter.WriteHeaderRecord(users.First().ToBsonDocument().Names.ToArray());
+                foreach (var user in users) { csvWriter.WriteDataRecord(user.ToBsonDocument().Values.ToArray()); }
                 Console.WriteLine();
             }
             
@@ -64,9 +67,6 @@ namespace twitter.GetFriends
 
         private static TwitterUser GetUserInfo()
         {
-            _tokens.AccessToken = Settings.Default.UserAccessToken;
-            _tokens.AccessTokenSecret = Settings.Default.UserAccessSecret;
-
             var lookupOptions = new LookupUsersOptions();
             lookupOptions.UserIds.Add(Settings.Default.UserId);
             lookupOptions.UseSSL = true;
