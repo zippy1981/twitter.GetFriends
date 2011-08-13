@@ -60,7 +60,7 @@ namespace twitter.GetFriends
                 Console.WriteLine();
             }
             
-            Console.Write("Press any key to continue . . .");
+            Console.Error.Write("Press any key to continue . . .");
             Console.ReadKey(false);
             Console.WriteLine();
         }
@@ -106,7 +106,7 @@ namespace twitter.GetFriends
             var token = OAuthUtility.GetRequestToken(Settings.Default.ConsumerKey, Settings.Default.ConsumerSecret, "oob");
             Process.Start("http://twitter.com/oauth/authorize?oauth_token=" + token.Token);
 
-            Console.Write("Please authorize our application and enter the pin code: ");
+            Console.Error.Write("Please authorize our application and enter the pin code: ");
             var pin = ReadPassword();
             Console.WriteLine();
 
