@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linq2twitter.GetFriends.Properties.Settings>
+  <!-- To generate your own consumer key/pair visit https://dev.twitter.com/apps -->
+  <setting name="ConsumerKey" serializeAs="String">
+    <value/>
+  </setting>
+  <setting name="ConsumerSecret" serializeAs="String">
+    <value/>
+  </setting>
+  <setting name="AccessToken" serializeAs="String">
+    <value />
+  </setting>
+  <setting name="AccessSecret" serializeAs="String">
+    <value />
+  </setting>
+  <setting name="UseAccessPair" serializeAs="String">
+    <value>False</value>
+  </setting>
+</linq2twitter.GetFriends.Properties.Settings>
