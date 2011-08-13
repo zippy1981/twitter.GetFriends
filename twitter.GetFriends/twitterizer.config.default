@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copy this to twitterizer.config, then insert your consumer key and secret. -->
-<linq2twitter.GetFriends.Properties.Settings>
+<twitter.GetFriends.Properties.Settings>
   <!-- To generate your own consumer key/pair visit https://dev.twitter.com/apps -->
   <setting name="ConsumerKey" serializeAs="String">
     <value/>
@@ -17,4 +17,4 @@
   <setting name="UseAccessPair" serializeAs="String">
     <value>False</value>
   </setting>
-</linq2twitter.GetFriends.Properties.Settings>
+</twitter.GetFriends.Properties.Settings>
