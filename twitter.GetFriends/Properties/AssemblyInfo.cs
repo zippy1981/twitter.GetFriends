@@ -1,4 +1,12 @@
-﻿using System.Reflection;
+﻿/*!
+ * twitter.GetFriends
+ * https://github.com/zippy1981/twitter.GetFriends
+ *
+ * Copyright 2011, Justin Dearing <zippy1981@gmail.com>
+ * Licensed under the MIT license.
+ */
+
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -8,9 +16,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("linq2twitter.GetFriends")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Justin Dearing")]
 [assembly: AssemblyProduct("linq2twitter.GetFriends")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCopyright("Copyright © Justin Dearing 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
