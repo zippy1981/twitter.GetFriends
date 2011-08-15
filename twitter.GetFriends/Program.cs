@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*!
+ * twitter.GetFriends
+ * https://github.com/zippy1981/twitter.GetFriends
+ *
+ * Copyright 2011, Justin Dearing <zippy1981@gmail.com>
+ * Licensed under the MIT license.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
