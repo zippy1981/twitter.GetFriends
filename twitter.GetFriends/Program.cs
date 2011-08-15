@@ -59,10 +59,6 @@ namespace twitter.GetFriends
                 foreach (var user in users) { csvWriter.WriteDataRecord(user.ToBsonDocument().Values.ToArray()); }
                 Console.WriteLine();
             }
-            
-            Console.Error.Write("Press any key to continue . . .");
-            Console.ReadKey(false);
-            Console.WriteLine();
         }
 
         private static TwitterUser GetUserInfo()
