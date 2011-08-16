@@ -64,10 +64,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Twitterizer2, Version=2.3.3.21964, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\twitterizer.2.3.3\lib\35\Twitterizer2.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -91,6 +87,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="twitterizer.config.default" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twitterizer\Twitterizer2\Twitterizer2.csproj">
+      <Project>{2FDC3492-6B9E-4771-9755-7892C9CB1E96}</Project>
+      <Name>Twitterizer2</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

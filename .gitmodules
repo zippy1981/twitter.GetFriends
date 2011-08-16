@@ -1,0 +1,3 @@
+[submodule "Twitterizer"]
+	path = Twitterizer
+	url = git@github.com:justaprogrammer/Twitterizer.git
